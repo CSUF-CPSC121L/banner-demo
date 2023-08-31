@@ -3,10 +3,11 @@
 #include "../cppaudit/gtest_ext.h"
 
 #include "../../banner.h"
+using testing::HasSubstr;
 
-TEST(Factorial, Zero) {
+TEST(DrawBanner, DrawBanner) {
 	SIMULATE_SIO("", DrawBanner("Hello"), {
-    ASSERT_THAT(your_output, HasSubstr("*********\n* Hello *\n********"))
+    ASSERT_THAT(your_output, HasSubstr("*********\n* Hello *\n*********\n"))
         << "Your program should draw a banner around the text, Hello.";
   })
 }
