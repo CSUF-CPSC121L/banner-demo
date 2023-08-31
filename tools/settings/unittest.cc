@@ -2,10 +2,13 @@
 #include <gtest/gtest.h>
 #include "../cppaudit/gtest_ext.h"
 
-#include "../../math.h"
+#include "../../banner.h"
 
 TEST(Factorial, Zero) {
-	ASSERT_EQ(factorial(0), 1);
+	SIMULATE_SIO("", DrawBanner("Hello"), {
+    ASSERT_THAT(your_output, HasSubstr("*********\n* Hello *\n********"))
+        << "Your program should draw a banner around the text, Hello.";
+  })
 }
 
 int main(int argc, char **argv) {
