@@ -1,7 +1,7 @@
 #include <iostream>
-// TODO: include your header files here
+#include "banner.h"
 
 int main() {
-  // TODO: Call your DrawBanner function here. You can provide any text.
+  DrawBanner("Hello world!");
   return 0;
 }
