@@ -5,4 +5,4 @@
 
 void DrawBanner(const std::string& text);
 
-# endif
+#endif
